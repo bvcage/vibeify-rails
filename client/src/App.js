@@ -1,6 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react'
+import { Route, Routes } from 'react-router-dom'
+import HomePage from './pages/HomePage'
 
-function App() {
+function App () {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -12,6 +14,9 @@ function App() {
   return (
     <div className="App">
       <h1>Page Count: {count}</h1>
+      <Routes>
+        <Route index element={<HomePage />} />
+      </Routes>
     </div>
   );
 }
